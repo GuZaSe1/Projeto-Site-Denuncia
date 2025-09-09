@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="imagens/favicon.png" type="image/png">
+    <title>Polícia Civil</title>
+</head>
+<body>
+    <header>
+        <div class="imagem_e_texto">
+            <img src="imagens/logo policia.png" alt="Logo da Polícia Civil" id="logo_imagem">
+            <h1 id="logo_titulo">Polícia Civil</h1>
+        </div>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>  
+
+    <hr class="linha">
+
+    <main>
+        <script src="script.js"></script>
+
+        <video id="video_capa" class="video_capa" src="videos/video_capa.mp4" autoplay loop muted playsinline></video>   
+        <div>
+        <section class="box_denuncias">
+            <details class="abrir_denuncia" id="roubo">
+                <summary><h2 class="titulo_denuncia">Furto e Roubo</h2></summary>
+            </details>
+
+            <form class="form_denuncia" method="post">
+                <label> Local: </label>
+                <input type="text" id="local_roubo" required> <br><br>
+                <label> Data (dd/mm/aaaa): </label>
+                <input type="text" id="data_roubo" required> <br><br>
+                <label> Hora (hh:mm): </label>
+                <input type="text" id="hora_roubo" required> <br><br>
+                <label> Objeto(s) roubado(s): </label>
+                <input type="text" id="objetos_roubo" required> <br><br>
+                <label> Descrição do ocorrido: </label> <br>
+                <textarea id="descricao_roubo" rows="4" cols="50" required></textarea> <br><br>
+                <input type="button" value="Enviar" class="botao_enviar" onclick="salvarRoubo(); window.open('resumo.html', '_blank');">
+            </form>
+        </section>
+
+        <section class="box_denuncias">
+            <details class="abrir_denuncia" id="violencia">
+                <summary><h2 class="titulo_denuncia">Violência Doméstica</h2></summary>
+            </details>
+
+            <form class="form_denuncia" method="post">
+                <label> Local: </label>
+                <input type="text" id="local_violencia" required> <br><br>
+                <label> Data (dd/mm/aaaa): </label>
+                <input type="text" id="data_violencia" required> <br><br>
+                <label> Hora (hh:mm): </label>
+                <input type="text" id="hora_violencia" required> <br><br>
+                <label> Envolvidos: </label>
+                <input type="text" id="envolvidos_violencia" required> <br><br>
+                <label> Objetos: </label>
+                <input type="text" id="objetos_violencia" required> <br><br>
+                <label> Descrição do ocorrido: </label> <br>
+                <textarea id="descricao_violencia" rows="4" cols="50" required></textarea> <br><br>
+                <input type="button" value="Enviar" class="botao_enviar" onclick="salvarViolencia(); window.open('resumo.html', '_blank');">
+            </form>
+        </section>
+
+        <section class="box_denuncias">
+            <details class="abrir_denuncia" id="acidente">
+                <summary><h2 class="titulo_denuncia">Acidente de Trânsito</h2></summary>
+            </details>
+
+            <form class="form_denuncia" method="post">
+                <label> Local: </label>
+                <input type="text" id="local_acidente" required> <br><br>
+                <label> Data (dd/mm/aaaa): </label>
+                <input type="text" id="data_acidente" required > <br><br>
+                <label> Hora (hh:mm): </label>
+                <input type="text" id="hora_acidente" required> <br><br>
+                <label> Envolvidos: </label>
+                <input type="text" id="envolvidos_acidente" required> <br><br>
+                <label> Veículos Envolvidos: </label>
+                <input type="text" id="veiculos_acidente" required> <br><br>
+                <label> Descrição do ocorrido: </label> <br>
+                <textarea id="descricao_acidente" rows="4" cols="50" required></textarea> <br><br>
+                <input type="button" value="Enviar" class="botao_enviar" onclick="salvarAcidente(); window.open('resumo.html', '_blank');">
+            </form>
+        </section>
+
+        <section class="box_denuncias">
+            <details class="abrir_denuncia" id="calunia">
+                <summary><h2 class="titulo_denuncia">Calúnia, Injúria ou Difamação</h2></summary>
+            </details>
+
+            <form class="form_denuncia" method="post" required>
+                <label> Local: </label>
+                <input type="text" id="local_calunia" required> <br><br>
+                <label> Data (dd/mm/aaaa): </label>
+                <input type="text" id="data_calunia" required> <br><br>
+                <label> Envolvidos: </label>
+                <input type="text" id="envolvidos_calunia" required> <br><br>
+                <label> Descrição do ocorrido: </label> <br>
+                <textarea id="descricao_calunia" rows="4" cols="50" required></textarea> <br><br>
+                <input type="button" value="Enviar" class="botao_enviar" onclick="salvarCalunia(); window.open('resumo.html', '_blank');">        
+            </form>
+        </section>
+        
+        <section class="sobre" id="sobre">
+            <h2>Sobre nós</h2>
+            <p>Somos a Polícia Civil, instituição de segurança pública presente em todo o território estadual, dedicada à preservação da ordem, à proteção da vida e do patrimônio. Atuamos de forma ostensiva e preventiva, com patrulhamento, atendimento a ocorrências e ações comunitárias que aproximam a polícia do cidadão. Nosso trabalho se orienta pela legalidade, disciplina, ética e respeito aos direitos humanos, com equipes treinadas para responder com rapidez e profissionalismo a diferentes tipos de situações. Investimos em capacitação contínua, tecnologia e inteligência policial para aumentar a eficiência do policiamento e a qualidade do atendimento. Mais do que reagir a crimes, buscamos prevenir, mediar conflitos e promover a sensação de segurança, fortalecendo a confiança e a cooperação com a sociedade.</p>
+        </section>
+        
+        <img id="imagem_sobre" src="imagens/sobre nos.png" alt="imagem policiais"> 
+
+        <section class="contato" id="contato">
+            <h2>Contato</h2>
+            <p>Para entrar em contato conosco, utilize os seguintes canais:</p> 
+            <p>Email: contato@policiacivil.sc.gov.br</p>
+            <p>Telefone: (47) 99270-2222</p>
+            
+        </section>
+    </main>
+
+    <footer>
+        <img id="policia_dourado" src="imagens/policia dourado.png" alt="logo policia dourado">
+        <div class="texto_footer">
+            <p>Polícia Civil</p>
+            <p>Delegacia de Polícia Virtual de Santa Catarina</p>
+            <p>Todos os direitos reservados © 2025</p>
+            <P>DENUNCIE</P>
+            <P>197 - Polícia Civil  •  181 - Disque Denúncia</P>
+        </div>
+        <img id="brasil" src="imagens/brasil.png" alt="bandeira brasil">
+    </footer>
+</body>
+</html>
